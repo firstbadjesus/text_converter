@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import { useState } from 'react'
 import './App.css';
+import runLogic from './logic'
 
 function App() {
+  const [value,setValue] = useState("");
+  
+  const handleChange = (event) => {
+    setValue(event.target.value)
+  } 
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="app__top">
+        <h1>Преобразователь строки</h1>
+        <input className="input--default" placeholder="enter text" value={value} onChange={ handleChange }/>  
+      </div>
+      <div className="app__bottom">
+        <h4>result:</h4>
+        <p>{runLogic(value)}</p>
+      </div>
+
     </div>
   );
 }
