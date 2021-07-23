@@ -19,7 +19,6 @@ function App() {
         <h4>result:</h4>
         <p>{runLogic(value)}</p>
       </div>
-
     </div>
   );
 }
