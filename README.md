@@ -1,3 +1,5 @@
+
+<!-- npm run test:jest для запуска теста -->
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
